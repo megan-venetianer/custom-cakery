@@ -3,11 +3,21 @@ const close = document.querySelector(".close");
 
 /********************************* HEADER *********************************/
 
-document.querySelector(".hamburger").addEventListener("click", () => {
+let hamburgerButton = document.querySelector(".hamburger");
+
+hamburgerButton.addEventListener("click", () => {
+  let attr = hamburgerButton.getAttribute('aria-expanded');
+
+  if(attr === 'true') {
+    hamburgerButton.setAttribute('aria-expanded', false);
+  } else {
+    hamburgerButton.setAttribute('aria-expanded', true);
+  }
   if (!menu.classList.contains("active")) {
     menu.classList.add("active");
     close.classList.add("active")
   }
+
 });
 
 document.querySelector(".close").addEventListener("click", () => {
@@ -48,7 +58,7 @@ if (document.querySelector("#order")) {
 
   document.querySelector(".modal-button").addEventListener("click", () => {
     if (document.querySelector(".modal-email-field").value) {
-      document.querySelector(".modal-content").innerHTML = 
+      document.querySelector(".modal-content").innerHTML =
       "<h3>Your coupon code is <span class='green'>cakelovers</span></h3>"
     }
   })
