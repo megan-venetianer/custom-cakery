@@ -2,7 +2,7 @@
 
 html, body {
   color: #576574;
-  font-size: 14px;
+  font-size: 20px;
   margin: 0;
   font-family: 'Josefin Slab', serif;
   display: flex;
@@ -27,7 +27,7 @@ a {
 }
 
 a:focus {
-  outline: none !important;
+  outline: 3px solid red;
 }
 
 form {
@@ -43,7 +43,7 @@ input[type="text"], input[type="number"], textarea {
 }
 
 input:focus {
-  outline: none!important;
+  outline: 2px solid blue;
 }
 
 button {
@@ -148,8 +148,7 @@ h4 {
 /********************************* ORDER PAGE *********************************/
 
 .order {
-  background-image: url('./images/cupcakes.jpeg');
-  background-size: 15%;
+  background: #BCD5F7;
 }
 
 .modal {
